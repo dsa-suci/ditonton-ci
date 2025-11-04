@@ -18,15 +18,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Set up Flutter 3.35.0 (Dart 3.9.2)
-      - name: Set up Flutter 3.35.0
+      # 2️⃣ Set up Flutter 3.35.7 (Dart 3.9.2)
+      - name: Set up Flutter 3.35.7
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.35.0"
+          flutter-version: "3.35.7"
           channel: stable
           cache: true
 
-      # 3️⃣ Disable analytics (supaya CI tidak terhenti di banner)
+      # 3️⃣ Disable analytics
       - name: Disable Flutter analytics
         run: flutter config --no-analytics
 
@@ -34,15 +34,15 @@ jobs:
       - name: Verify Flutter version
         run: flutter --version
 
-      # 5️⃣ Install dependencies
+      # 5️⃣ Get dependencies
       - name: Get dependencies
         run: flutter pub get
 
-      # 6️⃣ Analyze Dart code
+      # 6️⃣ Analyze code
       - name: Analyze code
         run: flutter analyze
 
-      # 7️⃣ Run tests (jika folder `test` ada)
+      # 7️⃣ Run tests (jika ada folder test)
       - name: Run tests
         run: |
           if [ -d "test" ]; then
