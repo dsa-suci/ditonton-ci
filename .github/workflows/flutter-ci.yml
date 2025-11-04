@@ -19,7 +19,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.24.0" # sesuaikan jika pakai versi lain
+          flutter-version: "3.24.3" # gunakan versi ini atau lebih baru
 
       - name: Flutter version
         run: flutter --version
