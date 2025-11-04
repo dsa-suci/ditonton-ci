@@ -200,7 +200,7 @@ class DetailContent extends StatelessWidget {
                                   return Text(state.message);
                                 } else if (state.recommendationState ==
                                     RequestState.Loaded) {
-                                  return Container(
+                                  return SizedBox(
                                     height: 150,
                                     child: ListView.builder(
                                       scrollDirection: Axis.horizontal,

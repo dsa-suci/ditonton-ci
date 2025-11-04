@@ -12,7 +12,7 @@ import '../../helpers/test_helper.mocks.dart';
 
 /// Dummy state untuk kondisi unknown/default
 class FakeTvDetailState extends TvDetailState {
-  FakeTvDetailState()
+  const FakeTvDetailState()
     : super(
         tvDetailState: RequestState.Empty,
         tvDetail: null,

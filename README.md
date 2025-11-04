@@ -1,9 +1,11 @@
-# ditonton
+# Ditonton
 
 A new Flutter project.
 
-# ditonton-ci
+---
 
-# Flutter CI Demo
+# Ditonton CI
 
-![Flutter CI](https://github.com/dsa-suci/ditonton-ci/actions/workflows/flutter-ci.yml/badge.svg)
+Flutter CI Demo
+
+![Flutter CI Status](https://github.com/dsa-suci/ditonton-ci/actions/workflows/flutter-ci.yml/badge.svg)
