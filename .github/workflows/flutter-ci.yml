@@ -22,7 +22,7 @@ jobs:
         with:
           flutter-version: "3.24.4"
           channel: stable
-          cache: true
+          cache: false
 
       - name: Disable Flutter analytics
         run: flutter config --no-analytics
