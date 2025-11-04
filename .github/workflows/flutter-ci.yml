@@ -17,10 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ✅ Semua perintah Flutter dalam satu step (PATH tetap aktif)
-      - name: Install Flutter 3.24.4 and run tests
+      - name: Install Flutter 3.27.0 and run tests
         run: |
-          git clone https://github.com/flutter/flutter.git --branch 3.24.4 --depth 1
+          git clone https://github.com/flutter/flutter.git --branch 3.27.0 --depth 1
           export PATH="$PATH:`pwd`/flutter/bin"
           flutter --version
           flutter config --no-analytics
