@@ -17,11 +17,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ✅ Gunakan versi Flutter manual
       - name: Set up Flutter (3.24.4 manual)
         run: |
           git clone https://github.com/flutter/flutter.git --branch 3.24.4 --depth 1
-          echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
+          echo "$PWD/flutter/bin" >> $GITHUB_PATH
+          export PATH="$PATH:$PWD/flutter/bin"
           flutter config --no-analytics
           flutter --version
 
