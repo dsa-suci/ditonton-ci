@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "name": "The Witcher",
+      "overview": "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+      "poster_path": "/zGVbrulkupqpbwgiNedkJPyQum4.jpg",
+      "backdrop_path": "/xAKMj134XHQVNHLC6rWsccLMenG.jpg",
+      "first_air_date": "2019-12-20",
+      "vote_average": 8.2
+    },
+    {
+      "id": 2,
+      "name": "Stranger Things",
+      "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+      "poster_path": "/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
+      "backdrop_path": "/56v2KjBlU4XaOv9rVYEQypROD7P.jpg",
+      "first_air_date": "2016-07-15",
+      "vote_average": 8.6
+    }
+  ]
+}

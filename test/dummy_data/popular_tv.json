@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "id": 3,
+      "name": "Breaking Bad",
+      "overview": "A high school chemistry teacher turned methamphetamine producer navigates the dangers of the criminal underworld.",
+      "poster_path": "/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+      "backdrop_path": "/bzoZjhbpriBT2N5kwgK0weUfVOX.jpg",
+      "first_air_date": "2008-01-20",
+      "vote_average": 9.5
+    },
+    {
+      "id": 4,
+      "name": "Game of Thrones",
+      "overview": "Nine noble families wage war against each other to gain control over the mythical land of Westeros.",
+      "poster_path": "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+      "backdrop_path": "/gX8SYlnL9ZznfZwEH4KJUePBFUM.jpg",
+      "first_air_date": "2011-04-17",
+      "vote_average": 8.4
+    }
+  ]
+}

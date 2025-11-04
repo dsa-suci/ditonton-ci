@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "id": 5,
+      "name": "Chernobyl",
+      "overview": "A dramatization of the true story of one of the worst man-made catastrophes in history.",
+      "poster_path": "/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+      "backdrop_path": "/sQ9eEDBzvS8c4B9gC6exvY6Wkce.jpg",
+      "first_air_date": "2019-05-06",
+      "vote_average": 9.4
+    },
+    {
+      "id": 6,
+      "name": "The Last of Us",
+      "overview": "Twenty years after modern civilization has been destroyed, Joel is hired to smuggle Ellie out of a quarantine zone.",
+      "poster_path": "/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg",
+      "backdrop_path": "/b0PlSFdDwbyK0cf5RxwDpaOJQvQ.jpg",
+      "first_air_date": "2023-01-15",
+      "vote_average": 9.3
+    }
+  ]
+}

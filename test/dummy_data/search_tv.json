@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "name": "The Witcher",
+      "overview": "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+      "poster_path": "/zGVbrulkupqpbwgiNedkJPyQum4.jpg",
+      "backdrop_path": "/xAKMj134XHQVNHLC6rWsccLMenG.jpg",
+      "first_air_date": "2019-12-20",
+      "vote_average": 8.2
+    }
+  ]
+}

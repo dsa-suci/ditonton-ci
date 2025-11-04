@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "name": "The Witcher",
+  "overview": "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+  "poster_path": "/zGVbrulkupqpbwgiNedkJPyQum4.jpg",
+  "backdrop_path": "/xAKMj134XHQVNHLC6rWsccLMenG.jpg",
+  "first_air_date": "2019-12-20",
+  "last_air_date": "2023-07-27",
+  "number_of_episodes": 24,
+  "number_of_seasons": 3,
+  "vote_average": 8.2,
+  "genres": [
+    { "id": 10765, "name": "Sci-Fi & Fantasy" },
+    { "id": 18, "name": "Drama" }
+  ]
+}
