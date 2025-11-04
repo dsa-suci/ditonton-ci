@@ -14,17 +14,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout source code
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Flutter 3.27.0 and run tests
+      # 2️⃣ Set up Flutter 3.35.0 (Dart 3.9.2)
+      - name: Set up Flutter 3.35.0
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.35.0"
+          channel: stable
+          cache: true
+
+      # 3️⃣ Disable analytics (supaya CI tidak terhenti di banner)
+      - name: Disable Flutter analytics
+        run: flutter config --no-analytics
+
+      # 4️⃣ Verify Flutter version
+      - name: Verify Flutter version
+        run: flutter --version
+
+      # 5️⃣ Install dependencies
+      - name: Get dependencies
+        run: flutter pub get
+
+      # 6️⃣ Analyze Dart code
+      - name: Analyze code
+        run: flutter analyze
+
+      # 7️⃣ Run tests (jika folder `test` ada)
+      - name: Run tests
         run: |
-          git clone https://github.com/flutter/flutter.git --branch 3.27.0 --depth 1
-          export PATH="$PATH:`pwd`/flutter/bin"
-          flutter --version
-          flutter config --no-analytics
-          flutter pub get
-          flutter analyze
           if [ -d "test" ]; then
             flutter test --no-pub --reporter expanded
           else
