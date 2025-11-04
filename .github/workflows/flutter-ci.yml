@@ -17,26 +17,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ✅ Install Flutter manual dari GitHub
-      - name: Install Flutter 3.24.4
+      # ✅ Semua perintah Flutter dalam satu step (PATH tetap aktif)
+      - name: Install Flutter 3.24.4 and run tests
         run: |
           git clone https://github.com/flutter/flutter.git --branch 3.24.4 --depth 1
-          echo "$PWD/flutter/bin" >> $GITHUB_PATH
-          export PATH="$PATH:$PWD/flutter/bin"
-          flutter doctor -v
+          export PATH="$PATH:`pwd`/flutter/bin"
           flutter --version
-
-      - name: Disable Flutter analytics
-        run: flutter config --no-analytics
-
-      - name: Get dependencies
-        run: flutter pub get
-
-      - name: Analyze code
-        run: flutter analyze
-
-      - name: Run tests
-        run: |
+          flutter config --no-analytics
+          flutter pub get
+          flutter analyze
           if [ -d "test" ]; then
             flutter test --no-pub --reporter expanded
           else
