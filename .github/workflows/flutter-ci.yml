@@ -14,35 +14,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout kode
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Instal Flutter stable terbaru (otomatis)
-      - name: Set up Flutter (latest stable)
+      - name: Set up Flutter 3.24.4
         uses: subosito/flutter-action@v2
         with:
+          flutter-version: "3.24.4"
           channel: stable
-          flutter-version: "latest"
           cache: true
 
-      # 3️⃣ Nonaktifkan analytics (supaya CI tidak terhenti di banner)
       - name: Disable Flutter analytics
         run: flutter config --no-analytics
 
-      # 4️⃣ Tampilkan versi Flutter dan Dart yang digunakan
       - name: Verify Flutter version
         run: flutter --version
 
-      # 5️⃣ Ambil dependensi proyek
       - name: Get dependencies
         run: flutter pub get
 
-      # 6️⃣ Analisis kode (lint check)
       - name: Analyze code
         run: flutter analyze
 
-      # 7️⃣ Jalankan test otomatis
       - name: Run tests
         run: |
           if [ -d "test" ]; then
