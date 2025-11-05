@@ -180,9 +180,15 @@ Future<void> init() async {
   // ===== HELPER & EXTERNAL =====
   locator.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
 
-  // 🔒 Ganti http.Client biasa dengan SSL pinned client
+  /// 🔒 Ganti http.Client biasa dengan SSL pinned client
+  /// Gunakan fingerprint SHA256 dari sertifikat TMDB
+  final String tmdbFingerprint =
+      'C6DBAE4DC2832CFD4E63FF88E950426C6241E3C78426CF2D4DD125FE97EEB8C7';
+  final String tmdbHost = 'api.themoviedb.org';
+
   final sslClient = await SSLPinning.createSSLPinnedClient(
-    allowedHost: 'api.themoviedb.org',
+    allowedHost: tmdbHost,
+    expectedFingerprint: tmdbFingerprint,
   );
   locator.registerLazySingleton<http.Client>(() => sslClient);
 }
